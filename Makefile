@@ -3,6 +3,7 @@ GCMD=run
 GPATH=main.go
 
 run:
+	make build
 	$(GCC) $(GCMD) $(GPATH)
 build:
 	make build_db
