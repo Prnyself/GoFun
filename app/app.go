@@ -6,7 +6,8 @@ import (
 
 	"github.com/go-xorm/xorm"
 	"github.com/xiaoheigou/GoFun/config"
-	"github.com/xiaoheigou/GoFun/db"
+	"github.com/xiaoheigou/GoFun/pkg/db"
+
 	"github.com/xiaoheigou/GoFun/routers"
 )
 
