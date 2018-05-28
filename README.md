@@ -7,19 +7,7 @@
 - 1.1安装migrate tool
   - https://db-migrate.readthedocs.io/en/latest/Getting%20Started/installation/
 - 1.2配置database.json
-  ```json
-  {
-  "dev": {
-    "host": "localhost",
-    "user": "root",
-    "password" : "123456",
-    "database": "func",
-    "driver": "mysql",
-    "multipleStatements": true
-  }
-}
 
-  ```
 - 1.3 db-migrate up
   - 查看数据库是否写入
 
