@@ -1,7 +1,10 @@
 GCC=go
 GCMD=run
 GPATH=main.go
-
+migrate-up:
+	db-migrate up
+migrate-down:
+	db-migrate down
 run:
 	make build
 	$(GCC) $(GCMD) $(GPATH)

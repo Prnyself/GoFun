@@ -4,15 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/go-xorm/xorm"
 	"github.com/xiaoheigou/GoFun/pkg/db"
 )
-
-var dd *xorm.Engine
-
-func init() {
-	dd, _ = db.Connect()
-}
 
 // @Summary 删除文章
 // @Produce  json

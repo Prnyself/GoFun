@@ -1,11 +1,15 @@
 package db
 
 import (
+	"fmt"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/xorm"
+	"github.com/xiaoheigou/GoFun/config"
 )
 
 func Connect() (*xorm.Engine, error) {
+	fmt.Sprintf("%s:%d@tcp(localhost:3306)/%s?charset=utf8", config.USER_NAME, config.USER_PWD, config.DATABASE)
 	return xorm.NewEngine("mysql", "root:123456@tcp(localhost:3306)/func?charset=utf8")
 }
 func Find(DB *xorm.Engine, findBy interface{}, objects interface{}) error {

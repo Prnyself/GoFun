@@ -6,20 +6,21 @@
 
 - 安装migrate tool
   - https://db-migrate.readthedocs.io/en/latest/Getting%20Started/installation/
-- db-migrate create add-users
-  - 生成migrate文件
-- 修改migrate文件
-  ```js
-    exports.up = function(db) {
-    return db.createTable('users',{
-        id:{type:'int',primaryKey:true,autoIncrement:true},
-        first:'string',
-        last:'string',
-    });
-    };
+- 配置database.json
+  ```json
+  {
+  "dev": {
+    "host": "localhost",
+    "user": "root",
+    "password" : "123456",
+    "database": "func",
+    "driver": "mysql",
+    "multipleStatements": true
+  }
+}
 
-    exports.down = function(db) {
-    return db.dropTable('users');
-    };
   ```
+- db-migrate up
+  - 查看数据库是否写入
+
 
